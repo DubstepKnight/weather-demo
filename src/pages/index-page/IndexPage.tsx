@@ -14,8 +14,8 @@ import { LocationData, Position } from '@/types/geo-data.type';
 import User from '@/types/user.type';
 import LocationSearchDialog from '@/components/ui/location-search-dialog/LocationSearchDialog';
 import WeatherCardSkeleton from '@/components/ui/weather-card/WeatherCardSkeleton';
-import { Header } from '@/components/ui/header/header';
 import { toast } from 'sonner';
+import { Header } from '@/components/ui/header/Header';
 
 function IndexPage(): React.ReactElement {
   const user = useLoaderData() as User;
