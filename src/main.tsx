@@ -8,20 +8,22 @@ import {
 import { Toaster } from '@/components/ui/sonner'
 import ErrorPage from './pages/error-page/ErrorPage.tsx';
 import LoginPage from './pages/login-page/LoginPage.tsx';
-import RootLayout from './RootLayout.tsx';
 
 import { getUser } from './lib/requests/get_user.ts';
 import './index.scss'
+import IndexPage from './pages/index-page/IndexPage.tsx';
+import User from './types/user.type.ts';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout />,
+    element: <IndexPage />,
     errorElement: <ErrorPage />,
-    loader: async () => {
+    loader: async (): Promise<User | null>  => {
       const user = await getUser();
       if (!user) {
-        return redirect("/login");
+        redirect('/login');
+        return null;
       }
       return user;
     }

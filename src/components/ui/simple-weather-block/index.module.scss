@@ -1,0 +1,30 @@
+.simpleWeatherBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+
+  .simpleWeatherBlockChild {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    .feelsLike {
+      color: grey;
+      font-size: 14px;
+    }
+  }
+
+  .regionText {
+    color: grey;
+    font-size: 14px;
+  }
+
+  .currentTemperature {
+    font-size: 48px;
+    font-weight: 600;
+  }
+}

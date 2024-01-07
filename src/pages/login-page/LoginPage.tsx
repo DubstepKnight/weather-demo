@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,10 +13,9 @@ import { toast } from 'sonner'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 import styles from './styles.module.scss';
-import User from '@/types/user';
+import User from '@/types/user.type';
 
-function LoginPage() {
-
+function LoginPage(): React.ReactElement {
   const {
     register,
     handleSubmit,
@@ -27,7 +27,7 @@ function LoginPage() {
   const loginFormSubmitHandler: SubmitHandler<User> = (data) => {
     localStorage.setItem('user', JSON.stringify(data));
     navigate('/');
-    toast('Event has been created.');
+    toast(`Welcome ${data.email}!`);
   }
 
   return (

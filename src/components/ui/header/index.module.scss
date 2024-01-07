@@ -1,0 +1,15 @@
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .searchButton {
+    display: flex;
+    gap: 1rem;
+    text-transform: capitalize;
+  }
+}

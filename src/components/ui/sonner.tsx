@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable react/react-in-jsx-scope */
 import { useTheme } from 'next-themes'
 import { Toaster as Sonner } from 'sonner'
 
