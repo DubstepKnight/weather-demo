@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# Weather app demo on React TS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To start the application in development mode use
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```zsh
+npm i
+npm run start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To use linting use:
+
+```bash
+npm run lint
+```
+
+To run tests use:
+
+```bash
+npm run test
+```
+
+You will need to download and paste the `.env` file with the API keys
+The repo has an example `.env_example` file values of which you will need to replace with your own or with those I attached in the email and put then in the `.env` file in the root directory
+
+APIs used:
+
+- [Google maps API](https://developers.google.com/maps)
+- [Weather API](https://www.weatherapi.com/my/)
